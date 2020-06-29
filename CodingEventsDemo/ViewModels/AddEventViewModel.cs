@@ -11,7 +11,14 @@ namespace CodingEventsDemo.ViewModels
 
         [Required(ErrorMessage = "Description is required")]
         [StringLength(500, ErrorMessage = "Description too long!")]
-        public string Description { get; set; }
+        public string Description { get; set; }        
+        
+        [Required(ErrorMessage = "Location is required")]
+        public string Location { get; set; }
+
+        [Range (0, 100000, ErrorMessage = "Number must be between 0 and 100,000")]
+        public string Attendee { get; set; }
+
 
         [EmailAddress]
         public string ContactEmail { get; set; }
